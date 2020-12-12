@@ -1,4 +1,4 @@
-i3-next-workspace (1.0-2) bionic; urgency=medium
+i3-next-workspace (1.0.1-1) bionic; urgency=medium
 
   [ Ken Gilmer ]
   * Fix build issues
