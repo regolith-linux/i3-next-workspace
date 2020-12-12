@@ -1,0 +1,5 @@
+i3-next-workspace (1.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Fri, 11 Dec 2020 20:32:35 -0800
