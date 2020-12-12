@@ -1,3 +1,10 @@
+i3-next-workspace (1.0-2) bionic; urgency=medium
+
+  [ Ken Gilmer ]
+  * Fix build issues
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sat, 12 Dec 2020 14:08:34 -0800
+
 i3-next-workspace (1.0-1) bionic; urgency=medium
 
   * Initial copy from regolith-i3xrocks-config.
