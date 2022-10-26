@@ -28,9 +28,14 @@ if __name__ == "__main__":
             if re.search("^i3-wm\.workspace\...\.name:",line)
             ]
     mapping_names = {
-            int(line.split(":")[0]) : line.split(":")[1]
+        int(line.split(":")[0]) : line.split(":")[1]
+        for line in output if ':' in line
+    }
+    if not mapping_names:
+        mapping_names = {
+            int(line) : line
             for line in output
-            }
+        }   
 
     startnum = min(mapping_names.keys())
     endnum = 50
