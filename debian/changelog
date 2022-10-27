@@ -1,3 +1,9 @@
+i3-next-workspace (1.0.2) bionic; urgency=medium
+
+  * Predicate list building on presence of separator character
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Thu, 27 Oct 2022 07:48:31 -0700
+
 i3-next-workspace (1.0.1-1) bionic; urgency=medium
 
   [ Ken Gilmer ]
