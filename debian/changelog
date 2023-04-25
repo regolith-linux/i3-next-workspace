@@ -1,3 +1,9 @@
+i3-next-workspace (1.0.3) focal; urgency=medium
+
+  * Relax search on workspace name to work with Regolith 3.0
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Mon, 24 Apr 2023 21:08:20 -0700
+
 i3-next-workspace (1.0.2) bionic; urgency=medium
 
   * Predicate list building on presence of separator character
