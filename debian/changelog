@@ -1,3 +1,10 @@
+i3-next-workspace (1.0.4) jammy; urgency=medium
+
+  [ Bence Ferdinandy ]
+  * fix: workspace regex
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Tue, 31 Dec 2024 16:16:00 -0800
+
 i3-next-workspace (1.0.3) focal; urgency=medium
 
   * Relax search on workspace name to work with Regolith 3.0
