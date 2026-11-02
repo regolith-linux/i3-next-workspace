@@ -35,13 +35,15 @@ if __name__ == "__main__":
         else:
             mapping_names[int(line)] = line
 
-    startnum = min(mapping_names.keys())
-    endnum = 50
+    # without workspace-name resources, workspaces are plain numbers from 1
+    startnum = min(mapping_names.keys(), default=1)
     i3 = i3ipc.Connection()
     workspaces = i3.get_workspaces()
     nums = {w.num for w in workspaces}
-    s_ = {x for x in range(startnum,endnum)}
-    targetnum = min(s_ - nums)
+    # first free number, with no upper limit
+    targetnum = startnum
+    while targetnum in nums:
+        targetnum += 1
     try:
         targetstring = f"{targetnum}:{mapping_names[targetnum]}"
     except KeyError:
