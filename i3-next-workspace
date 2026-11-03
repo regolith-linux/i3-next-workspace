@@ -30,7 +30,8 @@ if __name__ == "__main__":
     mapping_names = {}
     for line in output:
         if ":" in line:
-            key, value = line.split(":")
+            # the label may itself contain colons, e.g. "1:Chat: Work"
+            key, value = line.split(":", 1)
             mapping_names[int(key)] = value
         else:
             mapping_names[int(line)] = line
