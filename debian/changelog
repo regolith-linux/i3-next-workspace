@@ -1,3 +1,11 @@
+i3-next-workspace (1.0.7) jammy; urgency=medium
+
+  [ rego-port-bot ]
+  * fix: accept workspace names that contain a colon
+  * fix: work without workspace-name resources and past workspace 49
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Wed, 11 Nov 2026 12:19:56 -0800
+
 i3-next-workspace (1.0.6) jammy; urgency=medium
 
   [ Khosrow Moossavi ]
