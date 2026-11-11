@@ -4,6 +4,24 @@ import i3ipc
 import argparse
 import subprocess
 import re
+import sys
+
+
+def quote(name):
+    """Quote a workspace name as one argument of an i3 command."""
+    return '"' + name.replace('\\', '\\\\').replace('"', '\\"') + '"'
+
+
+def run_command(i3, command):
+    """Run an i3 command; return False and report on stderr if i3 rejects it."""
+    ok = True
+    for reply in i3.command(command):
+        if not reply.success:
+            print(f"i3-next-workspace: i3 rejected '{command}': {reply.error}",
+                  file=sys.stderr)
+            ok = False
+    return ok
+
 
 if __name__ == "__main__":
 
@@ -50,8 +68,11 @@ if __name__ == "__main__":
     except KeyError:
         targetstring = f"{targetnum}:{targetnum}"
 
+    # like a chain of i3 commands, run them all, then fail if any was rejected
+    ok = True
     if args.move_window or args.move_window_and_follow:
-        i3.command("move container workspace " + targetstring)
+        ok &= run_command(i3, "move container workspace " + quote(targetstring))
     if not args.move_window:
-        i3.command("workspace number " + targetstring)
+        ok &= run_command(i3, "workspace number " + quote(targetstring))
+    sys.exit(0 if ok else 1)
 
