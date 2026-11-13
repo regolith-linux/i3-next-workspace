@@ -1,3 +1,10 @@
+i3-next-workspace (1.0.8) jammy; urgency=medium
+
+  [ rego-port-bot ]
+  * fix: quote workspace names in the i3 command and fail when i3 rejects it
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Wed, 11 Nov 2026 14:21:36 -0800
+
 i3-next-workspace (1.0.7) jammy; urgency=medium
 
   [ rego-port-bot ]
